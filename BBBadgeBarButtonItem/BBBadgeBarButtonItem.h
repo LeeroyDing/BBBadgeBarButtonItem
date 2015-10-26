@@ -7,29 +7,30 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface BBBadgeBarButtonItem : UIBarButtonItem
 
 // Each time you change one of the properties, the badge will refresh with your changes
 
 // Badge value to be display
-@property (nonatomic) NSString *badgeValue;
+@property (nonatomic) IBInspectable NSString *badgeValue;
 // Badge background color
-@property (nonatomic) UIColor *badgeBGColor;
+@property (nonatomic) IBInspectable UIColor *badgeBGColor;
 // Badge text color
-@property (nonatomic) UIColor *badgeTextColor;
+@property (nonatomic) IBInspectable UIColor *badgeTextColor;
 // Badge font
-@property (nonatomic) UIFont *badgeFont;
+@property (nonatomic) IBInspectable UIFont *badgeFont;
 // Padding value for the badge
-@property (nonatomic) CGFloat badgePadding;
+@property (nonatomic) IBInspectable CGFloat badgePadding;
 // Minimum size badge to small
-@property (nonatomic) CGFloat badgeMinSize;
+@property (nonatomic) IBInspectable CGFloat badgeMinSize;
 // Values for offseting the badge over the BarButtonItem you picked
-@property (nonatomic) CGFloat badgeOriginX;
-@property (nonatomic) CGFloat badgeOriginY;
+@property (nonatomic) IBInspectable CGFloat badgeOriginX;
+@property (nonatomic) IBInspectable CGFloat badgeOriginY;
 // In case of numbers, remove the badge when reaching zero
-@property BOOL shouldHideBadgeAtZero;
+@property IBInspectable BOOL shouldHideBadgeAtZero;
 // Badge has a bounce animation when value changes
-@property BOOL shouldAnimateBadge;
+@property IBInspectable BOOL shouldAnimateBadge;
 
 - (BBBadgeBarButtonItem *)initWithCustomUIButton:(UIButton *)customButton;
 
